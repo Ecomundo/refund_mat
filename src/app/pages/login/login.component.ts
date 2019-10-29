@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import Swal from 'sweetalert2/dist/sweetalert2.js';
-
-import 'sweetalert2/src/sweetalert2.scss';
+//import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
+//import 'sweetalert2/src/sweetalert2.scss';
 
 import { User } from '../../models/user.model';
 import { LoginService } from '../../services/login.service';
