@@ -1,8 +1,8 @@
 version: "3"
 services:
-  refund-mat:
+  refund_mat:
     image: ecodock/refund_mat
-    container_name: refund-mat
+    container_name: refund_mat
     expose:
       - 80
       - 443
