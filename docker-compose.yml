@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   refund-mat:
-    build:  .
+    image: ecodock/refund-mat
     container_name: refund-mat
     expose:
       - 80
