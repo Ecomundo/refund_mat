@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  refund-mat:
+    build:  .
+    container_name: refund-mat
+    expose:
+      - 80
+      - 443
+    restart: always
+    mem_limit: 400M
+    environment:
+      - VIRTUAL_HOST=refund.ecomundo.edu.ec
+      - LETSENCRYPT_HOST=refund.ecomundo.edu.ec
+      - LETSENCRYPT_EMAIL=info@ecomundo.edu.ec
+
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+   
