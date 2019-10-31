@@ -25,4 +25,9 @@
             <input type="submit" class="btn btn-success card-footer" value="Entrar" (click)="login()">
         </div>
     </form>
+    <div *ngIf="err" class="row mt-2 justify-content-center">
+        <div class="col-4">
+            <div align="center" class="alert alert-danger hide" role="alert" id="error"> {{mensaje.message}} </div>
+        </div>
+    </div>
 </div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import Swal from 'sweetalert2';
+//import Swal from 'sweetalert2'
 
 import { User } from '../../models/user.model';
 import { LoginService } from '../../services/login.service';
@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
   public user: any;
   public pass: any;
   public log: User;
+  public err = false;
+  public mensaje: any;
 
   constructor(private _login: LoginService, private _router: Router) {
 
@@ -34,6 +36,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  hide(){
+    this.err = false;
+  }
+
   login() {
 
     this._login.signup(this.log).subscribe(
@@ -42,8 +48,8 @@ export class LoginComponent implements OnInit {
         this._router.navigate(['/dashboard']);
       },
       error => {
-        const mensaje = error['error'];
-        Swal.fire('Oops parece que esta ingresando mal tus datos :S !', mensaje.message, 'error');
+        this.mensaje = error['error'];
+        this.err = true;
       }
     );
 
