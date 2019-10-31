@@ -35,6 +35,12 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  hide() {
+    this.suc = false;
+    this.err = false;
+    this.ale = false;
+  }
+
   refund() {
     this._dash.refund(this.id).subscribe(
       ok => {
