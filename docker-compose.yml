@@ -7,7 +7,6 @@ services:
       - 80
       - 443
     restart: always
-    mem_limit: 400M
     environment:
       - VIRTUAL_HOST=refund.ecomundo.edu.ec
       - LETSENCRYPT_HOST=refund.ecomundo.edu.ec
