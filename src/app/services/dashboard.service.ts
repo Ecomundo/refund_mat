@@ -17,7 +17,8 @@ export class DashboardService {
   }
 
   refund(refund: any ) {
-    const json = JSON.stringify(refund);
+    console.log(refund);
+    const json = JSON.stringify(refund.json());
     const params = json;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
