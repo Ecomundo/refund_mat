@@ -1,6 +1,6 @@
 export class Refund {
     constructor(
-        public DF: string
+        public transaction_id: string
     ) {}
 
 }
