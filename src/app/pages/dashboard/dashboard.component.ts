@@ -35,19 +35,28 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  hide() {
+    this.suc = false;
+    this.err = false;
+    this.ale = false;
+  }
+
   refund() {
     this._dash.refund(this.id).subscribe(
       ok => {
         const cod = ok['estado'];
+        console.log(cod);
         this.id = new Refund('');
         if (cod === 0) {
           this.err = false;
           this.ale = false;
           this.suc = true;
+          this.mensaje = ok['mensaje'];
         } else if (cod === 5 || cod === 7 || cod === 9 || cod === 2) {
           this.suc = false;
           this.err = false;
           this.ale = true;
+          this.mensaje = ok['mensaje'];
         } else if (cod === 3 || cod === 4) {
           this.suc = false;
           this.ale = false;

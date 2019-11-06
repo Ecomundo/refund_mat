@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  hide(){
+  hide() {
     this.err = false;
   }
 
