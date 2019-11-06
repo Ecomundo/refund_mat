@@ -44,9 +44,9 @@ export class DashboardComponent implements OnInit {
   refund() {
     this._dash.refund(this.id).subscribe(
       ok => {
+        this.id = new Refund('');
         const cod = ok['estado'];
         console.log(cod);
-        this.id = new Refund('');
         if (cod === 0) {
           this.err = false;
           this.ale = false;
