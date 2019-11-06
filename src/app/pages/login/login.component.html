@@ -7,23 +7,27 @@
             <div class="card-body">
                 <div class="form-group">
                     <div class="input-group">
+
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
                         </div>
+
                         <input (click)="hide()" formControlName="user" type="text" name="user" [(ngModel)]="log.USER" class="form-control" id="validationTooltipUsername" placeholder="Usuario" aria-describedby="validationTooltipUsernamePrepend" required>
+
                     </div>
+
                 </div>
 
                 <div class="input-group">
+
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="validationTooltipPasswordPrepend">#</span>
                     </div>
-<<<<<<< HEAD
-                    <input  formControlName="pass" type="password" name="pass" [(ngModel)]="log.PASS" class="form-control" id="validationTooltipPassword" placeholder="Contraseña" aria-describedby="validationTooltipUsernamePrepend" required>
-=======
+
                     <input (click)="hide()" formControlName="pass" type="password" name="pass" [(ngModel)]="log.PASS" class="form-control" id="validationTooltipPassword" placeholder="Contraseña" aria-describedby="validationTooltipUsernamePrepend" required>
->>>>>>> c5d9d3c742a04b83f5b7d12c76ab9a01c4bfe882
+                    
                 </div>
+
 
             </div>
             <input type="submit" class="btn btn-success card-footer" value="Entrar" (click)="login()">
