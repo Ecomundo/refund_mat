@@ -18,8 +18,13 @@ export class DashboardService {
 
   refund(refund: any ) {
     console.log(refund);
-    const json = JSON.stringify(refund);
-    const params = json;
+    console.log(typeof refund);
+    const peso = refund.json();
+    console.log(peso);
+    console.log(typeof peso);
+
+    // const json = refund;
+    const params = refund;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this._http.post(this.url + 'refundDebtBase', params, { headers });
