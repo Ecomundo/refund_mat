@@ -20,9 +20,9 @@ export class DashboardService {
     console.log(refund);
     console.log(typeof refund);
 
-    // const json = refund;
-    const params = refund;
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const json = JSON.stringify(refund);
+    const params = json;
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', 'bearer ' + localStorage.getItem('token'));
 
     return this._http.post(this.url + 'refundDebtBase', params, { headers });
 
