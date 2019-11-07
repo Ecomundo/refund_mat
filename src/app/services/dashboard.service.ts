@@ -17,10 +17,12 @@ export class DashboardService {
   }
 
   refund(refund: any ) {
-    console.log(refund);
     console.log(typeof refund);
+    console.log(refund);
 
     const json = JSON.stringify(refund);
+    console.log(typeof json);
+    console.log(json);
     const params = json;
     const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', 'bearer ' + localStorage.getItem('token'));
 
