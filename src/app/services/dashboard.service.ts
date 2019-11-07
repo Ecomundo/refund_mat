@@ -19,9 +19,6 @@ export class DashboardService {
   refund(refund: any ) {
     console.log(refund);
     console.log(typeof refund);
-    const peso = refund.json();
-    console.log(peso);
-    console.log(typeof peso);
 
     // const json = refund;
     const params = refund;
