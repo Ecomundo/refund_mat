@@ -17,7 +17,7 @@
             <form ngNativeValidate [formGroup]="forma" #dashForm="ngForm" (ngSubmit)="refund()">
                 <div align="center" class="form-group">
                     <label>Ingrese DF generado</label>
-                    <input formControlName="df" type="text" name="transaction_id" [(ngModel)]="id" class="form-control" id="validationTooltipDf" placeholder="Ingrese DF" aria-describedby="validationTooltipUsernamePrepend" required>
+                    <input formControlName="df" type="text" name="transaction_id" [(ngModel)]="id.transaction_id" class="form-control" id="validationTooltipDf" placeholder="Ingrese DF" aria-describedby="validationTooltipUsernamePrepend" required>
                 </div>
                 <div align="center">
                     <input type="submit" class="btn btn-primary" value="Reversar">

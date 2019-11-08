@@ -18,12 +18,12 @@ export class DashboardComponent implements OnInit {
   public suc = false;
   public err = false;
   public ale = false;
-  public id: any = '';
+  public id: Refund;
 
 
   constructor(private _dash: DashboardService, private _router: Router) {
 
-    //this.id = new Refund('');
+    this.id = new Refund('');
 
   }
 
@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
   refund() {
     this._dash.refund(this.id).subscribe(
       ok => {
-        this.id = '';//new Refund('');
+        this.id = new Refund('');
         const cod = ok['estado'];
         console.log(cod);
         if (cod === 0) {
