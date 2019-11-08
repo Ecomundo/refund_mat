@@ -17,11 +17,8 @@ export class DashboardService {
   }
 
   refund(refund: any ) {
-    console.log('refund');
     console.log(refund);
-    console.log('refund.transaction_id');
-    console.log(refund.transaction_id);
-    const params = refund.transaction_id;
+    const params = refund;
     const headers = new HttpHeaders({'Content-Type': 'application/json','Authorization': 'bearer ' + localStorage.getItem('token')});
 
     return this._http.post(this.url + 'refundDebtBase', params, { headers });
